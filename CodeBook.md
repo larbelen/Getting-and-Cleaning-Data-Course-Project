@@ -133,10 +133,11 @@ Quoting from `features_info.txt`, here is an additional description of the varia
 > - fBodyGyroMag
 > - fBodyGyroJerkMag
 > 
-> The set of variables that were estimated from these signals are: 
+> The set of variables  signals are: 
 > 
 > - mean(): Mean value
-> - std(): Standard deviation
 > - meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+> - std(): Standard deviation
+
  
 

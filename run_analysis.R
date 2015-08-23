@@ -1,15 +1,15 @@
-# Create a directory
+# New  directory
 data.dir = path.expand("~/data/school/2015/courera-getdata-project/data")
 dir.create(data.dir, recursive=T)
 setwd(data.dir)
 
-# Download extract the raw data
+# Download extract 
 url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 zipfile = paste(data.dir, "UCI-HAR-Dataset.zip", sep="/")
 download.file(url, zipfile, method="curl")
 unzip(zipfile)
 
-# The data files are now in:
+# Data files are in:
 # ./UCI HAR Dataset
 # ./UCI HAR Dataset/activity_labels.txt
 # ./UCI HAR Dataset/features.txt
@@ -64,9 +64,8 @@ library(dplyr)
 
 # 1. Merge the training and the test sets to create one data set
 
-# An Exploration of how to read and combine test data
 
-# read test data
+# read
 xtest = read.table("./UCI HAR Dataset/test/X_test.txt")
 head(xtest)
 summary(xtest)
@@ -79,7 +78,7 @@ head(subjecttest)
 str(subjecttest)
 table(subjecttest)
 
-# check that the same number of observations exist.
+# READ THE same number of observations exist.
 nrow(xtest) == nrow(ytest)
 nrow(xtest) == nrow(subjecttest)
 

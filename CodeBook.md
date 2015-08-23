@@ -1,18 +1,23 @@
-## Study Design
+## 1-) Study 
 
-This section contains information on how the data for the Coursera Data Science Getting and Cleaning Data Course Project was collected and summarized.
+This is a code book that describes the variables, data, for the Coursera Data Science Getting and Cleaning Data Course Project was collected and summarized.
+
+
 
 A zip file containing the time window data training and test data and associated metadata, such as `activity_labels.txt`, and `features.txt`, of the Human Activity Recognition Using Smartphones Dataset was downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  The training and test datasets were combined.  Each row of the combined data set represents one observation of a 2.56 second time window, containing 561 variables summarizing the 128 raw data observations (50 observations a second from the gyroscope and accelerometer).  
 
 
-The script `run_analysis.R` generates two files: HAR-timewindow.txt and HAR-subject-activity-mean.txt.
+The script `run_analysis.R` generates two files: 
+
+HAR-subject-activity-mean.txt.
+HAR-timewindow.txt 
 
 In the table "HAR-timewindow.txt" only the summarization variables representing means and standard deviations were included.  Specifically only the 79 variables containing the word "mean" or "std" in their names were included, with the exception of the "angle" variables which represented the angle between vectors instead of a mean or standard deviation.  In the "HAR-timewindow.txt" table, each row corresponds to a single time window observation of a subject and an activity.  
 
 In the table "HAR-subject-activity-mean.txt", the data was further summarized by taking the mean of all the observations for each of the 79 variables per unique combination of subject and activity.  There ranged from 36 to 95 time windows associated with each combination of subject and activity.  The variable names in the file were prefixed with "subject-activity-mean-" to reflect that that these values are the mean of the corresponding time window values for each subject-activity group.
 
 
-## Code Book
+## 2-) Code Book
 
 This section contains specific information each variable (column) included in the uploaded table, HAR-subject-activity-mean.txt.  Most of the variables are summarizations of variables with the same name and description in the Human Activity Recognition Using Smartphones Dataset (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  The variables are described in the `features_info.txt` and `README.txt` in that dataset.  Please see those files for more details.  
 
